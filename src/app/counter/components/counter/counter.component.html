@@ -1,0 +1,10 @@
+<q>{{title}}</q>
+<div class="container">
+  <h4>Counter: <span style="border: 1px solid black; padding: 4px;border-radius: 4vh;">{{counter}}</span></h4>
+
+
+    <button class="btn btn-primary btn-sm" (click)="increaseBy(1)">+1</button>
+    <button class="btn btn-danger btn-sm" style="margin-left: 5%;" (click)="increaseBy(-1)">-1</button>
+    <button class="btn btn-warning btn-sm" style="margin-left: 5%;" (click)="resetCounter()">Reset</button>
+
+</div>
