@@ -12,7 +12,19 @@ import { DbzService } from '../services/dbz.service';
 
 export class DbzComponent {
 
-constructor(public dbzService:DbzService){}
+  constructor(private dbzService:DbzService){}
+
+  get characters():Character[] {
+    return [...this.dbzService.character];
+  }
+
+  onDeleteCharacter(id:string):void{
+    this.dbzService.deleteCharacterById(id)
+  }
+
+  onNewCharacter(character:Character):void {
+    this.dbzService.addCharacter(character)
+  }
 
 
 

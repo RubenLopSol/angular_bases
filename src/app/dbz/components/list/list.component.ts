@@ -16,10 +16,13 @@ export class ListComponent {
 
 
   @Output()
-  public onDelete:EventEmitter<number> = new EventEmitter();
+  public onDelete:EventEmitter<string> = new EventEmitter();
 
-  onDeleteCaracter(index:number):void {
-    this.onDelete.emit(index);
+  onDeleteCaracter(id?:string):void {
+
+    if (!id) return;
+    
+    this.onDelete.emit(id);
 
   }
 
