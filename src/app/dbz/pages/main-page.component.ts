@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { Character } from '../interfaces/character.interface';
+import { DbzService } from '../services/dbz.service';
 
 
 
@@ -11,20 +12,14 @@ import { Character } from '../interfaces/character.interface';
 
 export class DbzComponent {
 
-  public character: Character[] = [{
-    name: 'Son Goku',
-    power: 100000
-  },{
-    name:'Vegeta',
-    power: 99050
-  },{
-    name: 'Son Gohan',
-    power: 98500
-  }];
+constructor(public dbzService:DbzService){}
 
-  onNewCharacter(character: Character):void {
-    this.character.push(character);
 
-  }
+
+
+
+
+
+
 
 }
